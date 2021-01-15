@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Vaibhav Jaiswar">
+	<meta name="description" content="Drum Kit for making/playing beats anywhere. Mini Project for practice purpose also.">
+	<meta name="keywords" content="drums, drum kit, online, music, beats, webapp">
+	<link rel="icon" href="./favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="./css/index.css">
+	<title>My Web DrumKit</title>
+</head>
+<body>
+	<header>
+		<h1>My Web DrumKit</h1>
+		<h3>Play anywhere...On the browser!</h3>
+	</header>
+	<main>
+		<section id="click-drums" class="box">
+			<h2>Click | Keyboard DrumPads</h2>
+			<h4 class="center">Click on DrumPads or Use keyboard keys to play</h4>
+			<div id="click-drum-box">
+				<div class="drumpads" onclick="hit(0)">
+					<span class="key-show">Z | S</span>
+					<span>Kick</span>
+				</div>
+				<div class="drumpads" onclick="hit(1)">
+					<span class="key-show">X | D</span>
+					<span>Snare</span>
+				</div>
+				<div class="drumpads" onclick="hit(2)">
+					<span class="key-show">C | F</span>
+					<span>HiHat_Closed</span>
+				</div>
+				<div class="drumpads" onclick="hit(3)">
+					<span class="key-show">V | G</span>
+					<span>Crash</span>
+				</div>
+			</div>
+		</section>
+		<section id="digi-drums" class="box">
+			<h2>Digital DrumPad</h2>
+			<h4>Select Pads & Click Play Button / Space Key (for some better latency use Google Chrome) </h4>
+			<h4>Don't use javascript for music applications!!!</h4>
+			<div id="digi-drum-box">
+				<div id="digi-drum-info"> | &emsp;
+					<button id="play-btn" class="digi-btn" onclick="digiplay()">Play</button>
+					<button id="stop-btn" class="digi-btn" onclick="digistop()">Stop</button>
+					&emsp; | &emsp;
+					<span>Tempo : <input id="tempo" class="num-input" type="number" value="100" min="1" max="300" onchange="setTempo()" required /></span>
+					&emsp; | &emsp;
+					<span>Number of Pads : 16</span>
+					&emsp; | &emsp;
+				</div>
+				<div class="row-box">
+					<div class="pad-label">
+						<span>Kick</span>
+					</div>
+					<div class="pad-active"></div>
+					<div class="pad-box">
+						<div class="pad" onclick="activate([0,0])"></div>
+						<div class="pad" onclick="activate([0,1])"></div>
+						<div class="pad" onclick="activate([0,2])"></div>
+						<div class="pad" onclick="activate([0,3])"></div>
+						<div class="pad" onclick="activate([0,4])"></div>
+						<div class="pad" onclick="activate([0,5])"></div>
+						<div class="pad" onclick="activate([0,6])"></div>
+						<div class="pad" onclick="activate([0,7])"></div>
+						<div class="pad" onclick="activate([0,8])"></div>
+						<div class="pad" onclick="activate([0,9])"></div>
+						<div class="pad" onclick="activate([0,10])"></div>
+						<div class="pad" onclick="activate([0,11])"></div>
+						<div class="pad" onclick="activate([0,12])"></div>
+						<div class="pad" onclick="activate([0,13])"></div>
+						<div class="pad" onclick="activate([0,14])"></div>
+						<div class="pad" onclick="activate([0,15])"></div>
+					</div>
+				</div>
+				<div class="row-box">
+					<div class="pad-label">
+						<span>Snare</span>
+					</div>
+					<div class="pad-active"></div>
+					<div class="pad-box">
+						<div class="pad" onclick="activate([1,0])"></div>
+						<div class="pad" onclick="activate([1,1])"></div>
+						<div class="pad" onclick="activate([1,2])"></div>
+						<div class="pad" onclick="activate([1,3])"></div>
+						<div class="pad" onclick="activate([1,4])"></div>
+						<div class="pad" onclick="activate([1,5])"></div>
+						<div class="pad" onclick="activate([1,6])"></div>
+						<div class="pad" onclick="activate([1,7])"></div>
+						<div class="pad" onclick="activate([1,8])"></div>
+						<div class="pad" onclick="activate([1,9])"></div>
+						<div class="pad" onclick="activate([1,10])"></div>
+						<div class="pad" onclick="activate([1,11])"></div>
+						<div class="pad" onclick="activate([1,12])"></div>
+						<div class="pad" onclick="activate([1,13])"></div>
+						<div class="pad" onclick="activate([1,14])"></div>
+						<div class="pad" onclick="activate([1,15])"></div>
+					</div>
+				</div>
+				<div class="row-box">
+					<div class="pad-label">
+						<span>HiHat Closed</span>
+					</div>
+					<div class="pad-active"></div>
+					<div class="pad-box">
+						<div class="pad" onclick="activate([2,0])"></div>
+						<div class="pad" onclick="activate([2,1])"></div>
+						<div class="pad" onclick="activate([2,2])"></div>
+						<div class="pad" onclick="activate([2,3])"></div>
+						<div class="pad" onclick="activate([2,4])"></div>
+						<div class="pad" onclick="activate([2,5])"></div>
+						<div class="pad" onclick="activate([2,6])"></div>
+						<div class="pad" onclick="activate([2,7])"></div>
+						<div class="pad" onclick="activate([2,8])"></div>
+						<div class="pad" onclick="activate([2,9])"></div>
+						<div class="pad" onclick="activate([2,10])"></div>
+						<div class="pad" onclick="activate([2,11])"></div>
+						<div class="pad" onclick="activate([2,12])"></div>
+						<div class="pad" onclick="activate([2,13])"></div>
+						<div class="pad" onclick="activate([2,14])"></div>
+						<div class="pad" onclick="activate([2,15])"></div>
+					</div>
+				</div>
+				<div class="row-box">
+					<div class="pad-label">
+						<span>Crash</span>
+					</div>
+					<div class="pad-active"></div>
+					<div class="pad-box">
+						<div class="pad" onclick="activate([3,0])"></div>
+						<div class="pad" onclick="activate([3,1])"></div>
+						<div class="pad" onclick="activate([3,2])"></div>
+						<div class="pad" onclick="activate([3,3])"></div>
+						<div class="pad" onclick="activate([3,4])"></div>
+						<div class="pad" onclick="activate([3,5])"></div>
+						<div class="pad" onclick="activate([3,6])"></div>
+						<div class="pad" onclick="activate([3,7])"></div>
+						<div class="pad" onclick="activate([3,8])"></div>
+						<div class="pad" onclick="activate([3,9])"></div>
+						<div class="pad" onclick="activate([3,10])"></div>
+						<div class="pad" onclick="activate([3,11])"></div>
+						<div class="pad" onclick="activate([3,12])"></div>
+						<div class="pad" onclick="activate([3,13])"></div>
+						<div class="pad" onclick="activate([3,14])"></div>
+						<div class="pad" onclick="activate([3,15])"></div>
+					</div>
+				</div>
+				<div class="row-box">
+					<div class="pad-label">
+						<span>HiHat Opened</span>
+					</div>
+					<div class="pad-active"></div>
+					<div class="pad-box">
+						<div class="pad" onclick="activate([4,0])"></div>
+						<div class="pad" onclick="activate([4,1])"></div>
+						<div class="pad" onclick="activate([4,2])"></div>
+						<div class="pad" onclick="activate([4,3])"></div>
+						<div class="pad" onclick="activate([4,4])"></div>
+						<div class="pad" onclick="activate([4,5])"></div>
+						<div class="pad" onclick="activate([4,6])"></div>
+						<div class="pad" onclick="activate([4,7])"></div>
+						<div class="pad" onclick="activate([4,8])"></div>
+						<div class="pad" onclick="activate([4,9])"></div>
+						<div class="pad" onclick="activate([4,10])"></div>
+						<div class="pad" onclick="activate([4,11])"></div>
+						<div class="pad" onclick="activate([4,12])"></div>
+						<div class="pad" onclick="activate([4,13])"></div>
+						<div class="pad" onclick="activate([4,14])"></div>
+						<div class="pad" onclick="activate([4,15])"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<div id="mylinks">
+			<a href="https://github.com/vaibhavjaiswar" target="_blank">GitHub</a>
+			<a href="https://www.linkedin.com/in/vaibhavjaiswar" target="_blank">LinkedIn</a>
+			<a href="https://www.hackerrank.com/vaibhavjaiswar" target="_blank">HackerRank</a>
+		</div>
+		<p>&copy; Developed by Vaibhav Jaiswar</p>
+	</footer>
+	<script type="text/javascript" src="./js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+
+/* 
+---------colors--------
+#494ca2
+#8186d5
+#c6cbef
+#e3e7f1
+ */
+* {
+	/* border: 1px #00000055 dotted; */
+}
+
+body {
+	margin: 0;
+	font-family: candara, sans-serif;
+	min-width: 755px;
+}
+
+
+header {
+	text-align: center;
+	background-color: #494ca2;
+	color: #e3e7f1;
+}
+h1 {
+	color: #fff;
+	font-family: segoe print, candara, sans-serif;
+	font-size: 40px;
+	margin: 0;
+	padding: 10px 0;
+}
+h2 {
+	margin: 0;
+	padding: 10px 0;
+}
+h3 {
+	margin: 0;
+	padding: 10px 0;
+}
+h4 {
+	margin: 0;
+	padding: 8px 0;
+}
+
+main {
+
+}
+
+/* ------------------ Click Drums ------------------ */
+#click-drums {
+	text-align: center;
+}
+#click-drum-box {
+	/* border: 5px #8186d5 solid; */
+	min-height: 250px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-content: space-evenly;
+	align-items: center;
+}
+.drumpads {
+	width: 100px;
+	height: 100px;
+	margin: 10px;
+	padding: 10px;
+	color: #494ca2;
+	background-color: #c6cbef;
+	border: 5px #8186d5 solid;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	cursor: pointer;
+    user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+}
+.drumpad-hit {
+	opacity: 0.5;
+	transform: scale(1.08)
+}
+.key-show {
+	color: #fff;
+	font-family: candara;
+	font-weight: bolder;
+	font-size: 40px;
+	text-shadow: #000 1px 1px, #000 2px 2px, #000 3px 3px, #000 4px 4px;
+}
+
+
+/* ------------------- Digi Drums ------------------ */
+#digi-drums {
+	text-align: center;
+	background-color: #c6cbef;
+}
+#digi-drum-box {
+	min-height: 250px;
+	padding: 1px;
+	background-color: #999;
+	border: 4px #374045 solid;
+	border-radius: 6px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-content: start;
+	align-items: center;
+}
+#digi-drum-info {
+	width: 100%;
+	margin: 2px;
+	padding: 2px;
+	background-color: #374045;
+	color: #eee;
+	text-align: left;
+}
+.digi-btn {
+	cursor: pointer;
+	padding: 2px 4px;
+	background-color: #c6cbef;
+	border: 2px #8186d5 solid;
+	border-radius: 2px;
+	color: #494ca2;
+	font-weight: bold;
+}
+
+.row-box {
+	width: 100%;
+	margin: 1px;
+	padding: 2px;
+	background-color: #707070;
+	color: #fff;
+	border: 1px #888 solid;
+	/* border-radius: 6px; */
+	display: flex;
+	/* justify-content: space-between; */
+	align-items: center;
+}
+.pad-box {
+	/* width: 100%; */
+	display: flex;
+}
+.pad-label {
+	min-width: 100px;
+	margin-left: 5px;
+	text-align: left;
+	font-size: 16px;
+	display: flex;
+	justify-content: space-between;
+}
+.pad-active {
+	min-width: 7px;
+	min-height: 30px;
+	margin: 0 5px;
+	background-color: #555;
+	border: 1px #555 solid;
+	border-radius: 2px;
+}
+.pad {
+	width: 30px;
+	height: 30px;
+	margin: 1px;
+	background-color: #374045;
+	border: 1px #bbb solid;
+	border-radius: 2px;
+}
+.pad:nth-child(8n+5) {
+	background-color: #555;
+}
+.pad:nth-child(8n+6) {
+	background-color: #555;
+}
+.pad:nth-child(8n+7) {
+	background-color: #555;
+}
+.pad:nth-child(8n+8) {
+	background-color: #555;
+}
+.on {
+	background-color: #ddd;
+	border: 1px #333 solid;
+}
+.on:nth-child(8n+5) {
+	background-color: #ddd;
+	border: 1px #333 solid;
+}
+.on:nth-child(8n+6) {
+	background-color: #ddd;
+	border: 1px #333 solid;
+}
+.on:nth-child(8n+7) {
+	background-color: #ddd;
+	border: 1px #333 solid;
+}
+.on:nth-child(8n+8) {
+	background-color: #ddd;
+	border: 1px #333 solid;
+}
+
+
+/* ------------------- Footer -------------------- */
+footer {
+	text-align: center;
+	background-color: #494ca2;
+	color: #e3e7f1;
+}
+#mylinks {
+	width: 500px;
+	margin: auto;
+	display: flex;
+	justify-content: space-evenly;
+}
+#mylinks > a {
+	margin: 5px;
+	padding: 5px 10px;
+	text-decoration: none;
+	color: #fff;
+	font-weight: bold;
+}
+#mylinks > a:hover {
+	text-decoration: underline;
+}
+footer > p {
+	margin: 0;
+	padding: 10px;
+}
+
+
+/* --------------------- Common Classes ------------------- */
+.num-input {
+	width: 50px;
+}
+.center {
+	text-align: center;
+}
+.box {
+	margin: 0;
+	padding: 20px;
+}
+.disabled {
+	opacity: 0.2;
+}
+.hit {
+	animation: hit-animation 0.3s linear;
+}
+@keyframes hit-animation {
+	from {
+		background-color: #ddd;
+	}
+	to {
+		background-color: #555;
+	}
+}
